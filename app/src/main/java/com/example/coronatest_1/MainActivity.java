@@ -3,20 +3,15 @@ package com.example.coronatest_1;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View.OnClickListener;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener{
 
     Button btn_corona;
     Button btn_map;
     Button btn_vac;
-    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedlnstanceState){
