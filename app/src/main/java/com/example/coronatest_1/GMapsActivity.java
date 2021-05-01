@@ -42,7 +42,7 @@ public class GMapsActivity extends FragmentActivity implements OnMapReadyCallbac
         LatLng location = new LatLng(36.793875837165665, 127.12144837365759);
         mMap.addMarker(new MarkerOptions().position(location).title("쌍용역"));
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 7));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, (float) 6.73));
 
     }
 }
