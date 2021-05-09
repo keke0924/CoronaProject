@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Beige"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:gravity="center">
+    tools:context=".MainActivity">
 
    <FrameLayout
        android:layout_width="match_parent"
@@ -20,24 +20,23 @@
 
 
       <LinearLayout
-       android:orientation="vertical"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
 
 
-      <TextView
-          android:id="@+id/track"
-          android:layout_width="600px"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center|top"
-          android:layout_marginTop="150dp"
+         <TextView
+             android:id="@+id/track"
+             android:layout_width="600px"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center|top"
+             android:layout_marginTop="150dp"
 
-          android:background="@drawable/shape"
-          android:gravity="center|center_horizontal|top"
-          android:text="코로나 추적"
-          android:textColor="#FFFFFF"
-          android:textSize="30sp"
-           />
+             android:background="@drawable/shape"
+             android:gravity="center|center_horizontal|top"
+             android:text="코로나 추적"
+             android:textColor="#FFFFFF"
+             android:textSize="30sp" />
 
          <View
              android:layout_width="3dp"
@@ -49,8 +48,8 @@
              android:layout_width="600px"
              android:layout_height="800px"
              android:layout_gravity="center"
-             android:foregroundGravity="center"
              android:background="@drawable/shape"
+             android:foregroundGravity="center"
 
              >
 
@@ -59,7 +58,6 @@
                 android:layout_height="800px"
                 android:layout_gravity="center|top"
                 android:layout_weight="1"
-
                 android:gravity="center|top"
                 android:orientation="vertical">
 
@@ -72,7 +70,8 @@
                    android:backgroundTint="@color/DarkGray"
                    android:gravity="center|center_vertical"
                    android:text="코로나 현황"
-                   android:textSize="20sp"/>
+                   android:textColor="#FFFFFF"
+                   android:textSize="20sp" />
 
                <Button
                    android:id="@+id/btn_map"
@@ -82,7 +81,8 @@
                    android:layout_marginTop="30dp"
                    android:backgroundTint="@color/DarkGray"
                    android:text="코로나 맵"
-                   android:textSize="20sp"/>
+                   android:textColor="#FFFFFF"
+                   android:textSize="20sp" />
 
                <Button
                    android:id="@+id/btn_vac"
@@ -92,7 +92,8 @@
                    android:layout_marginTop="30dp"
                    android:backgroundTint="@color/DarkGray"
                    android:text="백신 접종현황"
-                   android:textSize="18sp"/>
+                   android:textColor="#FFFFFF"
+                   android:textSize="18sp" />
             </LinearLayout>
          </FrameLayout>
       </LinearLayout>

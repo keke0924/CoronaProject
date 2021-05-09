@@ -3,11 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NMapsActivity">
-    <!-- 네이버 지도 -->
-    <com.naver.maps.map.MapView
+    tools:context=".NMapsActivity"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/map"
-        android:name="com.naver.maps.map.MapFragment" />
+        android:orientation="vertical">
+
+    <Button
+        android:id="@+id/now"
+        android:backgroundTint="@color/LiteGray"
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape"
+        android:gravity="center"
+        android:text="실시간 확진자"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:layout_marginTop="30dp">
+
+
+                <!-- 네이버 지도 -->
+                <com.naver.maps.map.MapView
+                    android:id="@+id/map"
+                    android:name="com.naver.maps.map.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+
   </LinearLayout>
