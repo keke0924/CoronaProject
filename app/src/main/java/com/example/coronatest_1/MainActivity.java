@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
             startActivity(intent1);
         }
         else if(v.getId()==R.id.btn_map){
-            Intent intent2 = new Intent(MainActivity.this, NMapsActivity.class);
+            Intent intent2 = new Intent(MainActivity.this, GMapsActivity.class);
             startActivity(intent2);
         }
         else if(v.getId()==R.id.btn_vac){
