@@ -1,5 +1,6 @@
 package com.example.coronatest_1;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,11 +19,14 @@ import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.MapView;
 import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.overlay.InfoWindow;
+import com.naver.maps.map.overlay.Marker;
 
 
 public class NMapsActivity extends AppCompatActivity implements OnMapReadyCallback, OnClickListener {
     private MapView mapView;
     private static NaverMap naverMap;
+    private InfoWindow infoWindow;
     Button btn_now;
 
     @Override
@@ -52,7 +56,23 @@ public class NMapsActivity extends AppCompatActivity implements OnMapReadyCallba
                 5.6                           // 줌 레벨
         );
         naverMap.setCameraPosition(cameraPosition);
+        //Marker marker = new Marker();
+        //marker.setPosition(new LatLng(36.79379851270565,127.12149128900404));
+        //marker.setMap(naverMap);
 
+        infoWindow = new InfoWindow();
+        infoWindow.setAdapter(new InfoWindow.DefaultTextAdapter(getApplicationContext()) {
+            @NonNull
+            @Override
+            public CharSequence getText(@NonNull InfoWindow infoWindow) {
+                String a;
+                a = "123";
+                return a;
+            }
+        });
+        infoWindow.setPosition(new LatLng(36.413436852701466, 126.88437382859924));
+        infoWindow.setAlpha(0.7f);
+        infoWindow.setMap(naverMap);
     }
 
     @Override
