@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PresentActivity">
+    tools:context=".PresentActivity"
+    >
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="202dp"
+        android:layout_height="558dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/shape"
         android:foregroundGravity="center">
@@ -36,6 +37,7 @@
             <Button
                 android:id="@+id/button3"
                 android:layout_width="93dp"
+                android:layout_weight="1"
                 android:layout_height="111dp"
                 android:layout_marginTop="75dp"
                 android:text="총 확진자" />
@@ -43,6 +45,7 @@
             <Button
                 android:id="@+id/button4"
                 android:layout_width="93dp"
+                android:layout_weight="1"
                 android:layout_height="111dp"
                 android:layout_marginTop="75dp"
                 android:baselineAligned="false"
@@ -52,6 +55,7 @@
             <Button
                 android:id="@+id/button5"
                 android:layout_width="93dp"
+                android:layout_weight="1"
                 android:layout_height="112dp"
                 android:layout_marginTop="75dp"
                 android:text="치료중" />
@@ -59,11 +63,14 @@
             <Button
                 android:id="@+id/button6"
                 android:layout_width="94dp"
+                android:layout_weight="1"
                 android:layout_height="113dp"
                 android:layout_marginTop="75dp"
                 android:text="사망" />
 
         </GridLayout>
+
+
 
     </FrameLayout>
 
