@@ -40,6 +40,7 @@ public class GMapsActivity extends FragmentActivity implements OnMapReadyCallbac
 
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 7));
+
         googleMap.setOnInfoWindowClickListener(infoWindowClickListener);
         googleMap.setOnInfoWindowClickListener(infoWindowClickListener2);
 
