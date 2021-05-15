@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">CoronaTest_1</string>
+    <string name="app_name">코로나 추적</string>
     <string name="title_activity_g_maps">Map</string>
 </resources>

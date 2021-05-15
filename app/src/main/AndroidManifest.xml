@@ -15,8 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CoronaTest_1">
-        <activity android:name=".now"></activity>
-        <activity android:name=".NMapsActivity"></activity>
+        <activity android:name=".Seoul"></activity>
+        <activity android:name=".Chungnam" />
+        <activity android:name=".now" />
+        <activity android:name=".NMapsActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

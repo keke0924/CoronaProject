@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,11 +47,6 @@ public class NMapsActivity extends AppCompatActivity implements OnMapReadyCallba
     public void onMapReady( NaverMap naverMap) {
 
         this.naverMap = naverMap;
-        // Add a marker in Sydney and move the camera
-        //LatLng location = new LatLng(37.487936, 126.825071);
-        //mMap.addMarker(new MarkerOptions().position(location).title("쌍용역"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 7));
         CameraPosition cameraPosition = new CameraPosition(
                 new LatLng(36.79379851270565, 127.12149128900404),  // 위치 지정
                 5.6                           // 줌 레벨
@@ -65,14 +61,17 @@ public class NMapsActivity extends AppCompatActivity implements OnMapReadyCallba
             @NonNull
             @Override
             public CharSequence getText(@NonNull InfoWindow infoWindow) {
+
                 String a;
-                a = "123";
+                a = "000";
                 return a;
             }
         });
         infoWindow.setPosition(new LatLng(36.413436852701466, 126.88437382859924));
         infoWindow.setAlpha(0.7f);
         infoWindow.setMap(naverMap);
+
+
     }
 
     @Override
