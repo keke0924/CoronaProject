@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PresentActivity">
+    tools:context=".PresentActivity"
+    >
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="202dp"
+        android:layout_height="628dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/shape"
         android:foregroundGravity="center">
@@ -21,45 +22,74 @@
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="78dp"
-                android:text="총 확진자 수 "
+                android:text="일일 확진자 수 "
                 android:textSize="20sp"
                 app:layout_column="0"
                 app:layout_row="0" />
 
         </androidx.gridlayout.widget.GridLayout>
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="191dp"
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/button3"
+                android:layout_width="96dp"
+                android:layout_height="115dp"
+                android:layout_marginTop="75dp"
+                android:layout_weight="1"
+                android:text="총 확진자" />
+
+            <Button
                 android:id="@+id/button4"
-                android:layout_width="125dp"
-                android:layout_height="111dp"
+                android:layout_width="95dp"
+                android:layout_height="115dp"
+                android:layout_marginTop="75dp"
                 android:layout_weight="1"
                 android:baselineAligned="false"
-                android:layout_marginTop="75dp"
                 android:text="격리해제"
                 tools:ignore="HardcodedText" />
 
             <Button
                 android:id="@+id/button5"
-                android:layout_width="125dp"
-                android:layout_height="112dp"
-                android:layout_weight="1"
+                android:layout_width="96dp"
+                android:layout_height="115dp"
                 android:layout_marginTop="75dp"
+                android:layout_weight="1"
                 android:text="치료중" />
 
             <Button
                 android:id="@+id/button6"
-                android:layout_width="123dp"
-                android:layout_height="113dp"
-                android:layout_weight="1"
+                android:layout_width="95dp"
+                android:layout_height="115dp"
                 android:layout_marginTop="75dp"
+                android:layout_weight="1"
                 android:text="사망" />
 
-        </LinearLayout>
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="230dp"
+            android:layout_weight="1"
+            android:text=">확진자 수 비교" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="260dp"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linechart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
 
     </FrameLayout>
 
