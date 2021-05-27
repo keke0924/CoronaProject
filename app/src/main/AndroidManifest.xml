@@ -6,6 +6,7 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -14,8 +15,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CoronaTest_1">
-        <activity android:name=".Seoul"></activity>
+        android:theme="@style/Theme.CoronaTest_1"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".gyeonggi"></activity>
+        <activity android:name=".Seoul" />
         <activity android:name=".Chungnam" />
         <activity android:name=".now" />
         <activity android:name=".NMapsActivity" />
