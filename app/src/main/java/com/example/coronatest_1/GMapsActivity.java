@@ -29,6 +29,11 @@ import java.util.HashMap;
 public class GMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    Marker a1;
+    Marker a2;
+    Marker a3;
+    Marker a4;
+    Marker a5;
     HashMap<String, String> markerMap = new HashMap<String, String>();
     String id = null;
     String url = "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13&ncvContSeq=&contSeq=&board_id=&gubun=";
@@ -63,28 +68,28 @@ public class GMapsActivity extends FragmentActivity implements OnMapReadyCallbac
         mMap = googleMap;
         //String aa = "";
         LatLng location = new LatLng(36.714678, 126.863142);//충남
-        Marker a1 = mMap.addMarker(new MarkerOptions()
+        a1 = mMap.addMarker(new MarkerOptions()
                         .position(location).title(""));
         id = a1.getId();
         markerMap.put(id, "a1");
 
         LatLng location2 = new LatLng(37.546731, 126.980576);//서울
-        Marker a2 = mMap.addMarker(new MarkerOptions().position(location2).title(""));
+        a2 = mMap.addMarker(new MarkerOptions().position(location2).title(""));
         id = a2.getId();
         markerMap.put(id, "a2");
 
         LatLng location3 = new LatLng(37.419567, 127.513731);//경기도
-        Marker a3 = mMap.addMarker(new MarkerOptions().position(location3).title(""));
+        a3 = mMap.addMarker(new MarkerOptions().position(location3).title(""));
         id = a3.getId();
         markerMap.put(id, "a3");
 
         LatLng location4 = new LatLng(37.440223, 126.705649);//인천
-        Marker a4 = mMap.addMarker(new MarkerOptions().position(location4).title(""));
+        a4 = mMap.addMarker(new MarkerOptions().position(location4).title(""));
         id = a4.getId();
         markerMap.put(id, "a4");
 
         LatLng location5 = new LatLng(35.155949, 129.046728);//부산
-        Marker a5 = mMap.addMarker(new MarkerOptions().position(location5));
+        a5 = mMap.addMarker(new MarkerOptions().position(location5));
         id = a5.getId();
         markerMap.put(id, "a5");
 
