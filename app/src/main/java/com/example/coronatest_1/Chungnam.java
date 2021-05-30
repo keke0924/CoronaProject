@@ -90,7 +90,7 @@ public class Chungnam extends AppCompatActivity {
         textView23_1 = findViewById(R.id.textView23_1);
         textView24_1 = findViewById(R.id.textView24_1);
         textView25_1 = findViewById(R.id.textView25_1);
-        textView26_1 = findViewById(R.id.textView26_1);
+        
 
         //오늘
         textView1_2 = findViewById(R.id.textView1_2);
