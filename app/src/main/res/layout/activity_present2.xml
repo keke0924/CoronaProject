@@ -9,7 +9,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="628dp"
+        android:layout_height="696dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/shape"
         android:foregroundGravity="center">
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="230dp"
             android:layout_weight="1"
-            android:text=">확진자 수 비교" />
+            android:text="> 일일 확진자 수 그래프" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -89,6 +89,7 @@
                 android:id="@+id/linechart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </RelativeLayout>
 
     </FrameLayout>

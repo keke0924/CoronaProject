@@ -23,7 +23,7 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility sourceCompatibility
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
@@ -39,12 +39,13 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'org.jsoup:jsoup:1.13.1'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     // 네이버 지도 SDK
     implementation 'com.naver.maps:map-sdk:3.11.0'
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0' //꺾은선 그래프
 
 }
 
