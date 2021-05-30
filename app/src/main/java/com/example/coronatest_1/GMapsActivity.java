@@ -32,7 +32,7 @@ public class GMapsActivity extends FragmentActivity implements OnMapReadyCallbac
     Marker a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18;
     HashMap<String, String> markerMap = new HashMap<String, String>();
     String id = null;
-    String url = "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13&ncvContSeq=&contSeq=&board_id=&gubun=";
+    String url = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%BD%94%EB%A1%9C%EB%82%98+%ED%99%95%EC%A7%84%EC%9E%90";
     String msg;
     String seoultoday = null;
     String chungnamtoday = null;
@@ -103,7 +103,7 @@ public class GMapsActivity extends FragmentActivity implements OnMapReadyCallbac
         id = a8.getId();
         markerMap.put(id, "a8");
 
-        LatLng location9 = new LatLng(36.340487, 127.394989);//울산
+        LatLng location9 = new LatLng(35.549599, 129.274554);//울산
         a9 = mMap.addMarker(new MarkerOptions().position(location9));
         id = a9.getId();
         markerMap.put(id, "a9");
@@ -306,26 +306,26 @@ public class GMapsActivity extends FragmentActivity implements OnMapReadyCallbac
 
                 try{
                     Document doc = Jsoup.connect(url).get();
-                    Elements elements = doc.select("table > tbody > tr");//태그로 가져오기
+                    Elements elements = doc.select(".confirmed_case ");//태그로 가져오기
 
-                    seoultoday = elements.select("td").get(8).text();
-                    chungnamtoday = elements.select("td").get(96).text();
-                    gg = elements.select("td").get(72).text();
-                    incheon = elements.select("td").get(32).text();
-                    busan = elements.select("td").get(16).text();
-                    degu = elements.select("td").get(24).text();
-                    광주 = elements.select("td").get(40).text();
-                    대전 = elements.select("td").get(48).text();
-                    울산 = elements.select("td").get(56).text();
-                    세종 = elements.select("td").get(64).text();
-                    강원 = elements.select("td").get(80).text();
-                    충북 = elements.select("td").get(88).text();
-                    전북 = elements.select("td").get(104).text();
-                    전남 = elements.select("td").get(112).text();
-                    경북 = elements.select("td").get(120).text();
-                    경남 = elements.select("td").get(128).text();
-                    제주 = elements.select("td").get(136).text();
-                    검역 = elements.select("td").get(144).text();
+                    seoultoday = elements.get(0).text();
+                    chungnamtoday = elements.get(8).text();
+                    gg = elements.get(1).text();
+                    incheon = elements.get(3).text();
+                    busan = elements.get(4).text();
+                    degu = elements.get(2).text();
+                    광주 = elements.get(11).text();
+                    대전 = elements.get(14).text();
+                    울산 = elements.get(12).text();
+                    세종 = elements.get(17).text();
+                    강원 = elements.get(9).text();
+                    충북 = elements.get(10).text();
+                    전북 = elements.get(13).text();
+                    전남 = elements.get(15).text();
+                    경북 = elements.get(6).text();
+                    경남 = elements.get(5).text();
+                    제주 = elements.get(16).text();
+                    검역 = elements.get(7).text();
 
 
                     bundle.putString("message","서울 : " + seoultoday );
