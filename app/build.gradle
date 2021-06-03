@@ -23,6 +23,7 @@ android {
         }
     }
     compileOptions {
+        sourceCompatibility sourceCompatibility
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -46,6 +47,7 @@ dependencies {
     implementation 'com.naver.maps:map-sdk:3.11.0'
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'org.jsoup:jsoup:1.13.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0' //꺾은선 그래프
 
 }
 

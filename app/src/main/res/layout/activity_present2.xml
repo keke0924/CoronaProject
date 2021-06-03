@@ -9,8 +9,8 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="628dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="696dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/shape"
         android:foregroundGravity="center">
 
@@ -29,7 +29,7 @@
 
         </androidx.gridlayout.widget.GridLayout>
 
-        <LinearLayout
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="191dp"
             android:orientation="horizontal">
@@ -68,20 +68,20 @@
                 android:layout_weight="1"
                 android:text="사망" />
 
-        </LinearLayout>
+        </GridLayout>
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="230dp"
             android:layout_weight="1"
-            android:text=">확진자 수 비교" />
+            android:text="> 일일 확진자 수 그래프" />
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:layout_marginTop="250dp"
+            android:layout_marginTop="260dp"
             android:orientation="vertical"
             tools:context=".MainActivity">
 
@@ -89,6 +89,7 @@
                 android:id="@+id/linechart"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+
         </RelativeLayout>
 
     </FrameLayout>
