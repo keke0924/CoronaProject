@@ -159,7 +159,7 @@ public class Seoul extends AppCompatActivity {
                 Document doc = null;
                 try{
                     doc = Jsoup.connect(url).get();
-                    Elements elements = doc.select("tbody > tr");//테그로 가져오기
+                    Elements elements = doc.select("tbody > tr");//태그로 가져오기
 
 
                     textView1_1.setText("강남구");

@@ -4,13 +4,930 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Jeonnam">
+    android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="jeonnam"
-        android:textSize="40sp"
-        tools:ignore="MissingConstraints" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/table_outside"
+                android:stretchColumns="*"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:background="#F376C8ED"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/local"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/today"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView1_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView1_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView2_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView2_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView2_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView3_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView3_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView3_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView4_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView4_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView4_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView5_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView5_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView5_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView6_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView6_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView6_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView7_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView7_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView7_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView8_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView8_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView8_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView9_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView9_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView9_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView10_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView10_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView10_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView11_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView11_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView11_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView12_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView12_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView12_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView13_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView13_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView13_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView14_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView14_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView14_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView15_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView15_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView15_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView16_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView16_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView16_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView17_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView17_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView17_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView18_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView18_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView18_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView19_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView19_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView19_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView20_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView20_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView20_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView21_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView21_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView21_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView22_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView22_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView22_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView23_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView23_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView23_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView24_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView24_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView24_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView25_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView25_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView25_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView26_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="지역"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView26_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="당일 확진자"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView26_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/table_inside"
+                        android:gravity="center"
+                        android:text="총 확진자"
+                        android:textSize="20sp" />
+
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
