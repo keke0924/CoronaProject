@@ -17,15 +17,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="7dp"
         android:textSize="20sp"
         android:text="대구 확진자 현황"
         />
     <TableLayout
         android:layout_marginTop="50dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:stretchColumns="*"
-        android:background="@drawable/table_outside">
+        android:background="@drawable/table_inside">
 
         <TableRow
             android:layout_width="match_parent"

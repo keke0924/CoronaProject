@@ -138,7 +138,7 @@ public class GMapsActivity extends FragmentActivity implements OnMapReadyCallbac
         id = a15.getId();
         markerMap.put(id, "a15");
 
-        LatLng location16 = new LatLng(36.313729, 130.564613);//검역
+        LatLng location16 = new LatLng(34.942815, 129.563343);//검역
         a16= mMap.addMarker(new MarkerOptions().position(location16));
         id = a16.getId();
         markerMap.put(id, "a16");
@@ -154,7 +154,7 @@ public class GMapsActivity extends FragmentActivity implements OnMapReadyCallbac
         markerMap.put(id, "a18");
 
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, (float) 6.8));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location12, (float) 6.8));
 
         googleMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
 

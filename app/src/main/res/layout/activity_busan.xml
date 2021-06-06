@@ -20,21 +20,127 @@
                 android:layout_gravity="center"
                 >
 
-            <TextView
-                android:layout_gravity="center|top"
+                <TextView
+                    android:layout_gravity="center|top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginTop="7dp"
+                    android:text="서울 확진자 현황"
+                    />
+
+                <TableLayout
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:background="@drawable/table_inside">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:background="#5E92BECF"
+                        >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="당일 확진자"
+
+                            android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="총 확진자"
+                            android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="완치"
+                            android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="사망"
+                            android:textSize="20sp"/>
+
+
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="당일 확진자"
+
+                            android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="총 확진자"
+                            android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="완치"
+                            android:textSize="20sp"/>
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="사망"
+                            android:textSize="20sp"/>
+
+
+
+
+                    </TableRow>
+
+                </TableLayout>
+            <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:text="부산 확진자 현황"
-                />
+                android:layout_gravity="center">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top|left"
+                    android:layout_marginTop="119dp"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="10dp"
+                    android:text="▽시군별 확진자 현황" />
             <TableLayout
+
                 android:id="@+id/tableLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="150dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="50dp"
                 android:background="@drawable/table_outside"
@@ -646,6 +752,7 @@
 
                 </TableRow>
             </TableLayout>
+            </FrameLayout>
             </FrameLayout>
         </LinearLayout>
     </ScrollView>
