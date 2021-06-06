@@ -1,102 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Beige"
-    android:gravity="center"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-   <FrameLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-      <ImageView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:src="@drawable/icon_2" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="30dp"
+            android:background="@drawable/top_view_background"
+            app:layout_constraintBottom_toTopOf="@id/midView"
+            app:layout_constraintEnd_toEndOf="@id/mainView"
+            app:layout_constraintStart_toStartOf="@id/mainView"
+            app:layout_constraintTop_toTopOf="@id/mainView"
+            app:layout_constraintVertical_weight="2">
 
+            <TextView
+                android:id="@+id/totalTextView"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:text="총 접종자"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/firstVacNumTextView"
+                app:layout_constraintEnd_toStartOf="@id/totalNumberTextView"
+                app:layout_constraintStart_toStartOf="@id/topView"
+                app:layout_constraintTop_toTopOf="@id/topView" />
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:orientation="vertical">
+            <TextView
+                android:id="@+id/totalNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="000명"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/firstVacNumTextView"
+                app:layout_constraintEnd_toEndOf="@id/topView"
+                app:layout_constraintStart_toEndOf="@id/totalTextView"
+                app:layout_constraintTop_toTopOf="@id/topView" />
 
+            <TextView
+                android:id="@+id/firstVacTextView"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:text="1차 접종"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/topView"
+                app:layout_constraintEnd_toStartOf="@id/firstVacNumTextView"
+                app:layout_constraintStart_toStartOf="@id/topView"
+                app:layout_constraintTop_toBottomOf="@id/totalTextView" />
 
-         <TextView
-             android:id="@+id/track"
-             android:layout_width="600px"
-             android:layout_height="wrap_content"
-             android:layout_gravity="center|top"
-             android:layout_marginTop="150dp"
+            <TextView
+                android:id="@+id/firstVacNumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00명"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/topView"
 
-             android:background="@drawable/shape"
-             android:gravity="center|center_horizontal|top"
-             android:text="코로나 추적"
-             android:textColor="#FFFFFF"
-             android:textSize="30sp" />
+                app:layout_constraintEnd_toStartOf="@+id/secondVacTextView"
+                app:layout_constraintStart_toEndOf="@id/firstVacTextView"
+                app:layout_constraintTop_toBottomOf="@id/totalTextView" />
 
-         <View
-             android:layout_width="3dp"
-             android:layout_height="35dp"
-             android:layout_gravity="center"
-             android:background="#4E4F54" />
+            <TextView
+                android:id="@+id/secondVacTextView"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:text="2차 접종"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/topView"
+                app:layout_constraintEnd_toEndOf="@id/topView"
+                app:layout_constraintStart_toEndOf="@id/firstVacTextView"
+                app:layout_constraintTop_toBottomOf="@id/totalTextView" />
 
-         <FrameLayout
-             android:layout_width="600px"
-             android:layout_height="800px"
-             android:layout_gravity="center"
-             android:background="@drawable/shape"
-             android:foregroundGravity="center"
+            <TextView
+                android:id="@+id/secondVacNumTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00명"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/topView"
+                app:layout_constraintEnd_toEndOf="@id/topView"
+                app:layout_constraintStart_toEndOf="@id/secondVacTextView"
+                app:layout_constraintTop_toBottomOf="@id/totalTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-             >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/midView"
+            android:background="@drawable/top_view_background"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toTopOf="@id/botView"
+            app:layout_constraintEnd_toEndOf="@id/mainView"
+            app:layout_constraintStart_toStartOf="@id/mainView"
+            app:layout_constraintTop_toBottomOf="@id/topView"
+            app:layout_constraintVertical_weight="1">
 
-            <LinearLayout
-                android:layout_width="700px"
-                android:layout_height="800px"
-                android:layout_gravity="center|top"
-                android:layout_weight="1"
-                android:gravity="center|top"
-                android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/totalButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/text_background"
+                android:text="전체"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/midView"
+                app:layout_constraintEnd_toStartOf="@id/pfizerButton"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="@id/midView"
+                app:layout_constraintTop_toTopOf="@id/midView" />
 
-               <Button
-                   android:id="@+id/btn_corona"
-                   android:layout_width="150dp"
-                   android:layout_height="50dp"
-                   android:layout_gravity="center"
-                   android:layout_marginTop="25dp"
-                   android:backgroundTint="@color/DarkGray"
-                   android:gravity="center|center_vertical"
-                   android:text="코로나 현황"
-                   android:textColor="#FFFFFF"
-                   android:textSize="20sp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pfizerButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/text_background"
+                android:text="화이자"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/midView"
+                app:layout_constraintEnd_toStartOf="@id/astrazenecaButton"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/totalButton"
+                app:layout_constraintTop_toTopOf="@id/midView" />
 
-               <Button
-                   android:id="@+id/btn_map"
-                   android:layout_width="150dp"
-                   android:layout_height="50dp"
-                   android:layout_gravity="bottom|center"
-                   android:layout_marginTop="30dp"
-                   android:backgroundTint="@color/DarkGray"
-                   android:text="코로나 맵"
-                   android:textColor="#FFFFFF"
-                   android:textSize="20sp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/astrazenecaButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/text_background"
+                android:text="아스트라제네카"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/midView"
+                app:layout_constraintEnd_toEndOf="@id/midView"
+                app:layout_constraintHorizontal_weight="1.3"
+                app:layout_constraintStart_toEndOf="@id/pfizerButton"
+                app:layout_constraintTop_toTopOf="@id/midView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-               <Button
-                   android:id="@+id/btn_vac"
-                   android:layout_width="150dp"
-                   android:layout_height="50dp"
-                   android:layout_gravity="center"
-                   android:layout_marginTop="30dp"
-                   android:backgroundTint="@color/DarkGray"
-                   android:text="백신 접종현황"
-                   android:textColor="#FFFFFF"
-                   android:textSize="18sp" />
-            </LinearLayout>
-         </FrameLayout>
-      </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/botView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/mainView"
+            app:layout_constraintEnd_toEndOf="@id/mainView"
+            app:layout_constraintStart_toStartOf="@id/mainView"
+            app:layout_constraintTop_toBottomOf="@id/midView"
+            app:layout_constraintVertical_weight="3">
 
-   </FrameLayout>
-</LinearLayout>
+            <com.github.mikephil.charting.charts.LineChart
+                app:layout_constraintTop_toTopOf="@id/botView"
+                app:layout_constraintEnd_toEndOf="@id/botView"
+                app:layout_constraintStart_toStartOf="@id/botView"
+                app:layout_constraintBottom_toBottomOf="@id/botView"
+                android:layout_height="300dp"
+                android:layout_width="match_parent"
+                android:layout_margin="20dp"
+                android:id="@+id/chart"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
