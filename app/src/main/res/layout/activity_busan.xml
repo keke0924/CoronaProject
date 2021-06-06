@@ -13,6 +13,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:layout_gravity="center"
+                >
+
+            <TextView
+                android:layout_gravity="center|top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="부산 확진자 현황"
+                />
 
             <TableLayout
                 android:id="@+id/tableLayout"
@@ -30,7 +45,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TableRow
-                    android:background="#F376C8ED"
+                    android:background="#5E92BECF"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -631,6 +646,7 @@
 
                 </TableRow>
             </TableLayout>
+            </FrameLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

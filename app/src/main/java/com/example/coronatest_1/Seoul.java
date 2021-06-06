@@ -45,20 +45,10 @@ public class Seoul extends AppCompatActivity {
     TextView textView11_3, textView12_3, textView13_3, textView14_3, textView15_3, textView16_3, textView17_3, textView18_3, textView19_3, textView20_3;
     TextView textView21_3, textView22_3, textView23_3, textView24_3, textView25_3, textView26_3;
 
-    String id = null;
+
     String url = "https://www.seoul.go.kr/coronaV/coronaStatus.do";
-    String msg;
     final Bundle bundle = new Bundle();
 
-
-    Button btn;
-
-    private static final String TAG_LOCAL = "local";
-    private static final String TAG_TODAY ="today";
-    private static final String TAG_TOTAL ="total";
-
-    SQLiteDatabase sampleDB = null;
-    ListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
