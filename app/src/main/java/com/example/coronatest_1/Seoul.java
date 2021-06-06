@@ -57,10 +57,12 @@ public class Seoul extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seoul);
+
         textView5 = findViewById(R.id.textView5);
         textView6 = findViewById(R.id.textView6);
         textView7 = findViewById(R.id.textView7);
         textView8 = findViewById(R.id.textView8);
+
         //지역
         textView1_1 = findViewById(R.id.textView1_1);
         textView2_1 = findViewById(R.id.textView2_1);
