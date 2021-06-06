@@ -148,10 +148,6 @@ public class Seoul extends AppCompatActivity {
         textView25_3 = findViewById(R.id.textView25_3);
         textView26_3 = findViewById(R.id.textView26_3);
 
-        //btn = findViewById(R.id.btn);
-        //tb = (TableLayout)findViewById(R.id.tableLayout);
-        //tb.setVisibility(View.INVISIBLE);
-        //btn.setOnClickListener(v);
 
         new Thread(){
             @Override
