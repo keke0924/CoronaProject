@@ -44,6 +44,7 @@ public class PresentActivity extends AppCompatActivity {
 
     String id = null;
     String url = "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=";
+    String url2 = "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13&ncvContSeq=&contSeq=&board_id=&gubun=";
     String msg;
     final Bundle bundle = new Bundle();
 
@@ -164,6 +165,10 @@ public class PresentActivity extends AppCompatActivity {
                 try {
                     doc = Jsoup.connect(url).get();
                     Elements elements = doc.select("dd.ca_value");//테그로 가져오기
+                    Elements elements2 = doc.select("p.inner_value");//테그로 가져오기
+
+                    doc2 = Jsoup.connect(url2).get();
+                    Elements elements3 = doc2.select("td.number");
 
                     //누적
                     String a = elements.get(0).text();
@@ -218,8 +223,6 @@ public class PresentActivity extends AppCompatActivity {
                     daym.setData(bundle);
                     handler.sendMessage(daym);
 
-                    doc2 = Jsoup.connect(url).get();
-                    Elements elements2 = doc2.select("p.inner_value");//테그로 가져오기
 
                     String a7 = elements2.get(0).text();
                     bundle.putString("전날누적", String.valueOf(a7));
@@ -233,220 +236,219 @@ public class PresentActivity extends AppCompatActivity {
                     mmsg6.setData(bundle);
                     handler.sendMessage(mmsg6);
 
-                    doc3 = Jsoup.connect(url).get();
-                    Elements elements3 = doc3.select("td.number");
 
-                    String l1 = elements3.get(3).text();
+
+                    String l1 = elements3.get(11).text();
                     bundle.putString("서울총", String.valueOf(l1));
                     Message msg1 = handler.obtainMessage();
                     msg1.setData(bundle);
                     handler.sendMessage(msg1);
 
-                    String l2 = elements3.get(0).text();
+                    String l2 = elements3.get(8).text();
                     bundle.putString("서울오늘", String.valueOf(l2));
                     Message msg2 = handler.obtainMessage();
                     msg2.setData(bundle);
                     handler.sendMessage(msg2);
 
-                    String l3 = elements3.get(11).text();
+                    String l3 = elements3.get(19).text();
                     bundle.putString("부산총", String.valueOf(l3));
                     Message msg3 = handler.obtainMessage();
                     msg3.setData(bundle);
                     handler.sendMessage(msg3);
 
-                    String l4 = elements3.get(8).text();
+                    String l4 = elements3.get(16).text();
                     bundle.putString("부산오늘", String.valueOf(l4));
                     Message msg4 = handler.obtainMessage();
                     msg4.setData(bundle);
                     handler.sendMessage(msg4);
 
-                    String l5 = elements3.get(19).text();
+                    String l5 = elements3.get(27).text();
                     bundle.putString("대구총", String.valueOf(l5));
                     Message msg5 = handler.obtainMessage();
                     msg5.setData(bundle);
                     handler.sendMessage(msg5);
 
-                    String l6 = elements3.get(16).text();
+                    String l6 = elements3.get(24).text();
                     bundle.putString("대구오늘", String.valueOf(l6));
                     Message msg6 = handler.obtainMessage();
                     msg6.setData(bundle);
                     handler.sendMessage(msg6);
 
-                    String l7 = elements3.get(27).text();
+                    String l7 = elements3.get(35).text();
                     bundle.putString("인천총", String.valueOf(l7));
                     Message msg7 = handler.obtainMessage();
                     msg7.setData(bundle);
                     handler.sendMessage(msg7);
 
-                    String l8 = elements3.get(24).text();
+                    String l8 = elements3.get(32).text();
                     bundle.putString("인천오늘", String.valueOf(l8));
                     Message msg8 = handler.obtainMessage();
                     msg8.setData(bundle);
                     handler.sendMessage(msg8);
 
-                    String l9 = elements3.get(35).text();
+                    String l9 = elements3.get(43).text();
                     bundle.putString("광주총", String.valueOf(l9));
                     Message msg9 = handler.obtainMessage();
                     msg9.setData(bundle);
                     handler.sendMessage(msg9);
 
-                    String l10 = elements3.get(32).text();
+                    String l10 = elements3.get(40).text();
                     bundle.putString("광주오늘", String.valueOf(l10));
                     Message msg10 = handler.obtainMessage();
                     msg10.setData(bundle);
                     handler.sendMessage(msg10);
 
-                    String l11 = elements3.get(43).text();
+                    String l11 = elements3.get(51).text();
                     bundle.putString("대전총", String.valueOf(l11));
                     Message msg11 = handler.obtainMessage();
                     msg11.setData(bundle);
                     handler.sendMessage(msg11);
 
-                    String l12 = elements3.get(40).text();
+                    String l12 = elements3.get(48).text();
                     bundle.putString("대전오늘", String.valueOf(l12));
                     Message msg12 = handler.obtainMessage();
                     msg12.setData(bundle);
                     handler.sendMessage(msg12);
 
-                    String l13 = elements3.get(51).text();
+                    String l13 = elements3.get(59).text();
                     bundle.putString("울산총", String.valueOf(l13));
                     Message msg13 = handler.obtainMessage();
                     msg13.setData(bundle);
                     handler.sendMessage(msg13);
 
-                    String l14 = elements3.get(48).text();
+                    String l14 = elements3.get(56).text();
                     bundle.putString("울산오늘", String.valueOf(l14));
                     Message msg14 = handler.obtainMessage();
                     msg14.setData(bundle);
                     handler.sendMessage(msg14);
 
-                    String l15 = elements3.get(59).text();
+                    String l15 = elements3.get(67).text();
                     bundle.putString("세종총", String.valueOf(l15));
                     Message msg15 = handler.obtainMessage();
                     msg15.setData(bundle);
                     handler.sendMessage(msg15);
 
-                    String l16 = elements3.get(56).text();
+                    String l16 = elements3.get(64).text();
                     bundle.putString("세종오늘", String.valueOf(l16));
                     Message msg16 = handler.obtainMessage();
                     msg16.setData(bundle);
                     handler.sendMessage(msg16);
 
-                    String l17 = elements3.get(64).text();
+                    String l17 = elements3.get(75).text();
                     bundle.putString("경기총", String.valueOf(l17));
                     Message msg17 = handler.obtainMessage();
                     msg17.setData(bundle);
                     handler.sendMessage(msg17);
 
-                    String l18 = elements3.get(61).text();
+                    String l18 = elements3.get(72).text();
                     bundle.putString("경기오늘", String.valueOf(l18));
                     Message msg18 = handler.obtainMessage();
                     msg18.setData(bundle);
                     handler.sendMessage(msg18);
 
-                    String l19 = elements3.get(72).text();
+                    String l19 = elements3.get(83).text();
                     bundle.putString("강원총", String.valueOf(l19));
                     Message msg19 = handler.obtainMessage();
                     msg19.setData(bundle);
                     handler.sendMessage(msg19);
 
-                    String l20 = elements3.get(69).text();
+                    String l20 = elements3.get(80).text();
                     bundle.putString("강원오늘", String.valueOf(l20));
                     Message msg20 = handler.obtainMessage();
                     msg20.setData(bundle);
                     handler.sendMessage(msg20);
 
-                    String l21 = elements3.get(80).text();
+                    String l21 = elements3.get(91).text();
                     bundle.putString("충북총", String.valueOf(l21));
                     Message msg21 = handler.obtainMessage();
                     msg21.setData(bundle);
                     handler.sendMessage(msg21);
 
-                    String l22 = elements3.get(77).text();
+                    String l22 = elements3.get(88).text();
                     bundle.putString("충북오늘", String.valueOf(l22));
                     Message msg22 = handler.obtainMessage();
                     msg22.setData(bundle);
                     handler.sendMessage(msg22);
 
-                    String l23 = elements3.get(88).text();
+                    String l23 = elements3.get(99).text();
                     bundle.putString("충남총", String.valueOf(l23));
                     Message msg23 = handler.obtainMessage();
                     msg23.setData(bundle);
                     handler.sendMessage(msg23);
 
-                    String l24 = elements3.get(85).text();
+                    String l24 = elements3.get(96).text();
                     bundle.putString("충남오늘", String.valueOf(l24));
                     Message msg24 = handler.obtainMessage();
                     msg24.setData(bundle);
                     handler.sendMessage(msg24);
 
-                    String l25 = elements3.get(96).text();
+                    String l25 = elements3.get(107).text();
                     bundle.putString("전북총", String.valueOf(l25));
                     Message msg25 = handler.obtainMessage();
                     msg25.setData(bundle);
                     handler.sendMessage(msg25);
 
-                    String l26 = elements3.get(93).text();
+                    String l26 = elements3.get(104).text();
                     bundle.putString("전북오늘", String.valueOf(l26));
                     Message msg26 = handler.obtainMessage();
                     msg26.setData(bundle);
                     handler.sendMessage(msg26);
 
-                    String l27 = elements3.get(104).text();
+                    String l27 = elements3.get(115).text();
                     bundle.putString("전남총", String.valueOf(l27));
                     Message msg27 = handler.obtainMessage();
                     msg27.setData(bundle);
                     handler.sendMessage(msg27);
 
-                    String l28 = elements3.get(101).text();
+                    String l28 = elements3.get(112).text();
                     bundle.putString("전남오늘", String.valueOf(l28));
                     Message msg28 = handler.obtainMessage();
                     msg28.setData(bundle);
                     handler.sendMessage(msg28);
 
-                    String l29 = elements3.get(112).text();
+                    String l29 = elements3.get(123).text();
                     bundle.putString("경북총", String.valueOf(l29));
                     Message msg29 = handler.obtainMessage();
                     msg29.setData(bundle);
                     handler.sendMessage(msg29);
 
-                    String l30 = elements3.get(109).text();
+                    String l30 = elements3.get(120).text();
                     bundle.putString("경북오늘", String.valueOf(l30));
                     Message msg30 = handler.obtainMessage();
                     msg30.setData(bundle);
                     handler.sendMessage(msg30);
 
-                    String l31 = elements3.get(120).text();
+                    String l31 = elements3.get(131).text();
                     bundle.putString("경남총", String.valueOf(l31));
                     Message msg31 = handler.obtainMessage();
                     msg31.setData(bundle);
                     handler.sendMessage(msg31);
 
-                    String l32 = elements3.get(117).text();
+                    String l32 = elements3.get(128).text();
                     bundle.putString("경남오늘", String.valueOf(l32));
                     Message msg32 = handler.obtainMessage();
                     msg32.setData(bundle);
                     handler.sendMessage(msg32);
 
-                    String l33 = elements3.get(128).text();
+                    String l33 = elements3.get(139).text();
                     bundle.putString("제주총", String.valueOf(l33));
                     Message msg33 = handler.obtainMessage();
                     msg33.setData(bundle);
                     handler.sendMessage(msg33);
 
-                    String l34 = elements3.get(125).text();
+                    String l34 = elements3.get(136).text();
                     bundle.putString("제주오늘", String.valueOf(l34));
                     Message msg34 = handler.obtainMessage();
                     msg34.setData(bundle);
                     handler.sendMessage(msg34);
 
-                    String l35 = elements3.get(136).text();
+                    String l35 = elements3.get(147).text();
                     bundle.putString("검역총", String.valueOf(l35));
                     Message msg35 = handler.obtainMessage();
                     msg35.setData(bundle);
                     handler.sendMessage(msg35);
 
-                    String l36 = elements3.get(133).text();
+                    String l36 = elements3.get(144).text();
                     bundle.putString("검역오늘", String.valueOf(l36));
                     Message msg36 = handler.obtainMessage();
                     msg36.setData(bundle);
