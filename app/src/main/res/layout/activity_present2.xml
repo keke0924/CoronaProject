@@ -8,14 +8,14 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="690dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="740dp"
         android:background="@drawable/shape"
         android:foregroundGravity="center">
 
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:layout_marginTop="10dp"
             android:background="#ffeeeeee"
             tools:ignore="ExtraText">
 
