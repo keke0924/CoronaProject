@@ -3,7 +3,16 @@ package com.example.coronatest_1;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Bundle;
 import android.widget.Toast;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class DBHelper extends SQLiteOpenHelper {
 
@@ -14,6 +23,22 @@ public class DBHelper extends SQLiteOpenHelper {
         super(context, name, factory, version);
         this.context = context;
     }
+
+    long mNow;
+    Date mDate;
+    SimpleDateFormat mFormat = new SimpleDateFormat("MM/dd");
+
+    private String getTime(){
+        mNow = System.currentTimeMillis();
+        mDate = new Date(mNow);
+        return mFormat.format(mDate);
+    }
+
+
+    String id = null;
+    String url = "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=11&ncvContSeq=&contSeq=&board_id=&gubun=";
+    String msg;
+    final Bundle bundle = new Bundle();
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -37,6 +62,24 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public void adddata(PresentActivity presentActivity){
+
+        new Thread() {
+            @Override
+            public void run() {
+                Document doc = null;
+
+                try {
+                    doc = Jsoup.connect(url).get();
+                    Elements elements = doc.select("p.inner_value");//테그로 가져오기
+
+                    String today = elements.get(0).text();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
         SQLiteDatabase db = getWritableDatabase();
 
         StringBuffer sb = new StringBuffer();
@@ -45,8 +88,8 @@ public class DBHelper extends SQLiteOpenHelper {
         sb.append("VALUES(?,?)");
 
         db.execSQL(sb.toString(), new Object[]{
-                presentActivity.mFormat
-                , presentActivity.textView1_7});
+                presentActivity.getTime()
+                , presentActivity.today});
     }
 
 

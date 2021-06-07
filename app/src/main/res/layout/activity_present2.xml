@@ -14,7 +14,7 @@
             android:orientation="vertical">
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="696dp"
+        android:layout_height="780dp"
         android:layout_marginTop="50dp"
         android:background="@drawable/shape"
         android:foregroundGravity="center">
@@ -35,32 +35,32 @@
 
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="166dp"
+                    android:layout_width="179dp"
                     android:layout_height="46dp"
+                    android:layout_marginTop="29dp"
                     android:text="일일확진자"
                     android:textAlignment="textEnd"
-                    android:layout_marginTop="29dp"
                     android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/textView1_7"
-                    android:layout_width="158dp"
+                    android:layout_width="211dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="29dp"
                     android:text="일일확진자"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="28sp" />
+                    android:textSize="32sp" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/textView1_6"
-                android:layout_width="163dp"
+                android:layout_width="151dp"
                 android:layout_height="wrap_content"
                 android:layout_row="0"
                 android:layout_column="0"
-                android:text="날짜"
                 android:layout_marginTop="22dp"
+                android:text="날짜"
                 android:textAlignment="textEnd" />
 
         </GridLayout>
@@ -71,14 +71,14 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="94dp"
+                android:layout_width="130dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="100dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView13"
-                    android:layout_width="94dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="누적"
@@ -107,14 +107,14 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="97dp"
+                android:layout_width="130dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="100dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView14"
-                    android:layout_width="95dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:baselineAligned="false"
@@ -144,14 +144,14 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="97dp"
+                android:layout_width="130dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="100dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView15"
-                    android:layout_width="96dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:layout_weight="1"
@@ -181,23 +181,23 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="135dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="100dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView16"
-                    android:layout_width="95dp"
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="사망"
                     android:textAlignment="center"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/textView1_4"
-                    android:layout_width="90dp"
+                    android:layout_width="130dp"
                     android:layout_height="35dp"
                     android:layout_weight="1"
                     android:text="TextView"
@@ -207,13 +207,13 @@
 
                 <TextView
                     android:id="@+id/textView2_4"
-                    android:layout_width="90dp"
+                    android:layout_width="130dp"
                     android:layout_height="42dp"
                     android:layout_weight="1"
                     android:text="TextView"
                     android:textAlignment="center"
                     android:textColor="#FF5050"
-                    android:textSize="17sp"/>
+                    android:textSize="17sp" />
 
             </LinearLayout>
 
@@ -227,19 +227,662 @@
             android:layout_weight="1"
             android:text="> 일일 확진자 수 그래프" />
 
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_marginTop="260dp"
-            android:orientation="vertical"
-            tools:context=".MainActivity">
-
-            <com.github.mikephil.charting.charts.LineChart
-                android:id="@+id/linechart"
+            android:layout_height="match_parent">
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="400dp"
+                android:layout_marginTop="220dp"
+                android:orientation="vertical">
 
-        </RelativeLayout>
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="@drawable/table_outside"
+                    android:stretchColumns="*"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TableRow
+                        android:background="#F376C8ED"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local"
+                            android:layout_width="8dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="지역"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="111dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="확진자"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/today"
+                            android:layout_width="111dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="확진자"
+                            android:textSize="20sp" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local1"
+                            android:layout_width="82dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="서울"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/seoul"
+                            android:layout_width="158dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="서울총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tseoul"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="서울오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local2"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="부산"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/busan"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="부산총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tbusan"
+                            android:layout_width="111dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="부산오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local3"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="대구"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/daegu"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="대구총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tdaegu"
+                            android:layout_width="111dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="대구오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local4"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="인천"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/incheon"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="인천총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tincheon"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="인천오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local5"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="광주"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/gwangju"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="광주총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tgwangju"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="광주오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local6"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="대전"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/daejeon"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="대전총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tdaejeon"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="대전오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local7"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="울산"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/ulsan"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="울산총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tulsan"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="울산오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local8"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="세종"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/saejong"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="세종총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tsaejong"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="세종오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local9"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="경기"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/keongi"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="경기총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tkeongi"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="경기오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local10"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="강원"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/gangwon"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="강원총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tgangwon"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="강원오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local11"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="충북"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/chunbuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="충북총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tchunbuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="충북오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local12"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="충남"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/chunnam"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="충남총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tchunnam"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="충남오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local13"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="전북"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/jeonbuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="전북총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tjeonbuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="전북오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local14"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="전남"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/jeonnam"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="전남총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tjeonnam"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="전남오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local15"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="경북"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/keongbuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="경북총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tkeongbuk"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="경북오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local16"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="경남"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/keongnam"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="경남총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tkeongnam"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="경남오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local17"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="제주"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/jeju"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="제주총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tjeju"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="제주오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/local18"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="검역"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/x"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="검역총"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/tx"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:background="@drawable/table_inside"
+                            android:gravity="center"
+                            android:text="검역오늘"
+                            android:textSize="20sp" />
+
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
 
     </FrameLayout>
         </LinearLayout>
