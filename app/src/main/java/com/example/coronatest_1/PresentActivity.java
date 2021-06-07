@@ -613,7 +613,4 @@ public class PresentActivity extends AppCompatActivity {
 
         }
     };
-
-
-
 }
