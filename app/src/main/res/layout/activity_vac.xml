@@ -13,7 +13,6 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
         android:background="@drawable/round_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,176 +21,775 @@
         tools:ignore="MissingClass">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/topView"
-            android:layout_width="313dp"
-            android:layout_height="186dp"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginVertical="30dp"
-            android:background="@drawable/top_view_background"
-            app:layout_constraintBottom_toTopOf="@id/midView"
-            app:layout_constraintEnd_toEndOf="@id/mainView"
-            app:layout_constraintStart_toStartOf="@id/mainView"
-            app:layout_constraintTop_toTopOf="@id/mainView"
-            app:layout_constraintVertical_weight="2">
-
-            <TextView
-                android:id="@+id/totalTextView"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/text_background"
-                android:gravity="center"
-                android:text="총 접종자"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/firstVacNumTextView"
-                app:layout_constraintEnd_toStartOf="@id/totalNumberTextView"
-                app:layout_constraintStart_toStartOf="@id/topView"
-                app:layout_constraintTop_toTopOf="@id/topView" />
-
-            <TextView
-                android:id="@+id/totalNumberTextView"
-                android:layout_width="90dp"
-                android:layout_height="37dp"
-                android:text="000명"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/firstVacNumTextView"
-                app:layout_constraintEnd_toEndOf="@id/topView"
-                app:layout_constraintStart_toEndOf="@id/totalTextView"
-                app:layout_constraintTop_toTopOf="@id/topView"
-                app:layout_constraintVertical_bias="0.494" />
-
-            <TextView
-                android:id="@+id/firstVacTextView"
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:background="@drawable/text_background"
-                android:gravity="center"
-                android:text="1차 접종"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/topView"
-                app:layout_constraintEnd_toStartOf="@id/firstVacNumTextView"
-                app:layout_constraintStart_toStartOf="@id/topView"
-                app:layout_constraintTop_toBottomOf="@id/totalTextView" />
-
-            <TextView
-                android:id="@+id/firstVacNumTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="00명"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/topView"
-
-                app:layout_constraintEnd_toStartOf="@+id/secondVacTextView"
-                app:layout_constraintStart_toEndOf="@id/firstVacTextView"
-                app:layout_constraintTop_toBottomOf="@id/totalTextView" />
-
-            <TextView
-                android:id="@+id/secondVacTextView"
-                android:layout_width="80dp"
-                android:layout_height="40dp"
-                android:background="@drawable/text_background"
-                android:gravity="center"
-                android:text="2차 접종"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/topView"
-                app:layout_constraintEnd_toEndOf="@id/topView"
-                app:layout_constraintStart_toEndOf="@id/firstVacTextView"
-                app:layout_constraintTop_toBottomOf="@id/totalTextView" />
-
-            <TextView
-                android:id="@+id/secondVacNumTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="00명"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/topView"
-                app:layout_constraintEnd_toEndOf="@id/topView"
-                app:layout_constraintStart_toEndOf="@id/secondVacTextView"
-                app:layout_constraintTop_toBottomOf="@id/totalTextView" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/midView"
-            android:layout_width="320dp"
-            android:layout_height="92dp"
-            android:layout_margin="20dp"
-            android:background="@drawable/top_view_background"
-            app:layout_constraintBottom_toTopOf="@id/botView"
-            app:layout_constraintEnd_toEndOf="@id/mainView"
-            app:layout_constraintStart_toStartOf="@id/mainView"
-            app:layout_constraintTop_toBottomOf="@id/topView"
-            app:layout_constraintVertical_weight="1">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/totalButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/text_background"
-                android:text="전체"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/midView"
-                app:layout_constraintEnd_toStartOf="@id/pfizerButton"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="@id/midView"
-                app:layout_constraintTop_toTopOf="@id/midView" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/pfizerButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/text_background"
-                android:text="화이자"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/midView"
-                app:layout_constraintEnd_toStartOf="@id/astrazenecaButton"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@id/totalButton"
-                app:layout_constraintTop_toTopOf="@id/midView" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/astrazenecaButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/text_background"
-                android:text="아스트라제네카"
-                android:textColor="@color/white"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/midView"
-                app:layout_constraintEnd_toEndOf="@id/midView"
-                app:layout_constraintHorizontal_weight="1.3"
-                app:layout_constraintStart_toEndOf="@id/pfizerButton"
-                app:layout_constraintTop_toTopOf="@id/midView" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/botView"
-            android:layout_width="423dp"
-            android:layout_height="381dp"
-            app:layout_constraintBottom_toBottomOf="@id/mainView"
-            app:layout_constraintEnd_toEndOf="@id/mainView"
-            app:layout_constraintStart_toStartOf="@id/mainView"
-            app:layout_constraintTop_toBottomOf="@id/midView"
-            app:layout_constraintVertical_weight="3">
+            android:layout_width="430dp"
+            android:layout_height="772dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="-33dp">
 
+
+            <LinearLayout
+                android:layout_width="426dp"
+                android:layout_height="154dp"
+
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="2dp"
+                tools:layout_editor_absoluteY="74dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topView"
+                    android:layout_width="match_parent"
+                    android:layout_height="78dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="30dp"
+                    android:background="@drawable/top_view_background">
+
+                    <TextView
+                        android:id="@+id/firstVacTextView"
+                        android:layout_width="114dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:text="1차 당일실적"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/topView"
+                        app:layout_constraintEnd_toStartOf="@id/firstVacNumTextView"
+                        app:layout_constraintStart_toStartOf="@id/topView" />
+
+                    <TextView
+                        android:id="@+id/firstVacNumTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="2958명"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+
+                        app:layout_constraintBottom_toBottomOf="@id/topView"
+                        app:layout_constraintEnd_toStartOf="@+id/secondVacTextView"
+                        app:layout_constraintStart_toEndOf="@id/firstVacTextView" />
+
+                    <TextView
+                        android:id="@+id/secondVacTextView"
+                        android:layout_width="114dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/text_background"
+                        android:gravity="center"
+                        android:text="2차 당일실적"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/topView"
+                        app:layout_constraintEnd_toEndOf="@id/topView"
+                        app:layout_constraintHorizontal_bias="0.481"
+                        app:layout_constraintStart_toEndOf="@id/firstVacTextView" />
+
+                    <TextView
+                        android:id="@+id/secondVacNumTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="0명"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/topView"
+                        app:layout_constraintEnd_toEndOf="@id/topView"
+                        app:layout_constraintStart_toEndOf="@id/secondVacTextView" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="250dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:id="@+id/tableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="536dp"
+                        android:background="@drawable/round_background"
+                        android:stretchColumns="*"
+                        tools:layout_editor_absoluteX="7dp"
+                        tools:layout_editor_absoluteY="140dp">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#F376C8ED">
+
+                            <TextView
+                                android:id="@+id/local"
+                                android:layout_width="92dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/top_view_background"
+                                android:gravity="center"
+                                android:text="구분"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/fsttotal"
+                                android:layout_width="90dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/top_view_background"
+                                android:gravity="center"
+                                android:text="1회 당일누계"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/sectotal"
+                                android:layout_width="150dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/top_view_background"
+                                android:gravity="center"
+                                android:text="2회 당일누계"
+                                android:textSize="20sp" />
+
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local1"
+                                android:layout_width="82dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="합계"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/total1"
+                                android:layout_width="158dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="7598787"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/total2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="2279682"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="서울"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/seoul"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="1341990"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/seoul2"
+                                android:layout_width="111dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="366927"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local3"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="부산"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/busan"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="544617"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/busan2"
+                                android:layout_width="111dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="135444"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local4"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="대구"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/daegu"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="310974"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/daegu2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="100645"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local5"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="인천"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/incheon"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="379184"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/incheon2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="106422"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local6"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="광주"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gwangju"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="225811"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gwangju2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="72228"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local7"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="대전"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/daejeon"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="205823"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/daejeon2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="63846"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local8"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="울산"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/ulsan"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="131107"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/ulsan2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="36976"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local9"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="세종"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/sejong"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="36266"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/sejong2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="10940"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local10"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="경기"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gg"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="1656515"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gg2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="484840"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local11"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="강원"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gangwon"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="288346"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gangwon2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="85709"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local12"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="충북"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/chungbuk"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="275426"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/chungbuk2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="83585"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local13"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="충남"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/chungnam"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="357685"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/chungnam2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="113516"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local14"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="전북"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/jeonbuk"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="371759"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/jeonbuk2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="117081"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local15"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="전남"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/jeonnam"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="417914"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/jeonnam2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="150869"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local16"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="경북"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gb"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="448207"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gb2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="155961"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local17"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="경남"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gyeongnam"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="509910"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/gyeongnam2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="166532"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local18"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="제주"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/jeju"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="97253"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/jeju2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text="28161"
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/local19"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text=""
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/zero"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text=""
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/zero2"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/table_inside"
+                                android:gravity="center"
+                                android:text=""
+                                android:textSize="20sp" />
+
+                        </TableRow>
+
+                    </TableLayout>
+                </LinearLayout>
+            </ScrollView>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
