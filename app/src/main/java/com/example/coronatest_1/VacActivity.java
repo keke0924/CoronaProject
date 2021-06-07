@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 public class VacActivity extends AppCompatActivity {
 
     @Override
