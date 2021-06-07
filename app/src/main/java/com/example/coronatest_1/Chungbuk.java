@@ -208,91 +208,7 @@ public class Chungbuk extends AppCompatActivity {
                             break;
                         }
 
-//                        if (i == 11) {
-//                            bundle.putString("부평당일확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            break;
-//                        }
-//                        if (i == 12) {
-//                            bundle.putString("계양구총확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
-//
-//                        if (i == 13) {
-//                            bundle.putString("계양구당일확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
-//                        if (i == 14) {
-//                            bundle.putString("서구총확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
-//
-//                        if (i == 15) {
-//                            bundle.putString("서구당일확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
-//
-//                        if (i == 16) {
-//                            bundle.putString("강화군총확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
-//
-//                        if (i == 17) {
-//                            bundle.putString("강화군당일확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
-//
-//                        if (i == 18) {
-//                            bundle.putString("옹진군총확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
-//
-//                        if (i == 19) {
-//                            bundle.putString("옹진군당일확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
-//
-//                        if (i == 2) {
-//                            bundle.putString("기타총확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
-//
-//                        if (i == 23) {
-//                            bundle.putString("기타당일확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            break;
-//                        }
+
                     }
 
                 }catch (IOException e){
@@ -437,12 +353,9 @@ public class Chungbuk extends AppCompatActivity {
             Bundle bundle20 = msg.getData();
             textView10_3.setText(bundle20.getString("옥천군"));
 
-//
+
             Bundle bundle22 = msg.getData();
             textView11_3.setText(bundle22.getString("영동군"));
-
-
-
 
         }
     };

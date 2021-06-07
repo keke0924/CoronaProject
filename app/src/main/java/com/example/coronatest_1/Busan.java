@@ -293,13 +293,6 @@ public class Busan extends AppCompatActivity {
                             continue;
                         }
 
-//                        if (i == 18) {
-//                            bundle.putString("중구당일확진자", a);
-//                            Message mmsg = handler.obtainMessage();
-//                            mmsg.setData(bundle);
-//                            handler.sendMessage(mmsg);
-//                            continue;
-//                        }
 
                         if (i == 19) {
                             bundle.putString("중구총확진자", a);
@@ -440,19 +433,7 @@ public class Busan extends AppCompatActivity {
                     }
 
 
-                    //msg = elements.text();
 
-                    //textView1_1.setText("강남구");
-//                        bundle.putString("message",강남구오늘확진자 );
-//                        Message mmsg = handler.obtainMessage();
-//                        mmsg.setData(bundle);
-//                        handler.sendMessage(mmsg);
-
-
-//                        bundle.putString("mes",강남구총확진자 );
-//                        Message mmsg2 = handler.obtainMessage();
-//                        mmsg2.setData(bundle);
-//                        handler.sendMessage(mmsg2);
 
 
                 }catch (IOException e){
@@ -667,59 +648,6 @@ public class Busan extends AppCompatActivity {
             Bundle bundle34 = msg.getData();
             textView17_2.setText(bundle34.getString("기타당일확진자"));
 
-//            Bundle bundle35 = msg.getData();
-//            textView9_2.setText(bundle35.getString("노원구당일확진자"));
-//
-//            Bundle bundle36 = msg.getData();
-//            textView10_2.setText(bundle36.getString("도봉구당일확진자"));
-//
-//            Bundle bundle37 = msg.getData();
-//            textView11_2.setText(bundle37.getString("동대문구당일확진자"));
-//
-//            Bundle bundle38 = msg.getData();
-//            textView12_2.setText(bundle38.getString("동작구당일확진자"));
-//
-//            Bundle bundle39 = msg.getData();
-//            textView13_2.setText(bundle39.getString("마포구당일확진자"));
-//
-//            Bundle bundle40 = msg.getData();
-//            textView14_2.setText(bundle40.getString("서대문구당일확진자"));
-//
-//            Bundle bundle41 = msg.getData();
-//            textView15_2.setText(bundle41.getString("서초구당일확진자"));
-//
-//            Bundle bundle42 = msg.getData();
-//            textView16_2.setText(bundle42.getString("성동구당일확진자"));
-//
-//            Bundle bundle43 = msg.getData();
-//            textView17_2.setText(bundle43.getString("성북구당일확진자"));
-//
-//            Bundle bundle44 = msg.getData();
-//            textView18_2.setText(bundle44.getString("송파구당일확진자"));
-//
-//            Bundle bundle45 = msg.getData();
-//            textView19_2.setText(bundle45.getString("양천구당일확진자"));
-//
-//            Bundle bundle46 = msg.getData();
-//            textView20_2.setText(bundle46.getString("영등포구당일확진자"));
-//
-//            Bundle bundle52 = msg.getData();
-//            textView21_2.setText(bundle52.getString("용산구당일확진자"));
-//
-//            Bundle bundle47 = msg.getData();
-//            textView22_2.setText(bundle47.getString("은평구당일확진자"));
-//
-//            Bundle bundle48 = msg.getData();
-//            textView23_2.setText(bundle48.getString("종로구당일확진자"));
-//
-//            Bundle bundle49 = msg.getData();
-//            textView24_2.setText(bundle49.getString("중구당일확진자"));
-//
-//            Bundle bundle50 = msg.getData();
-//            textView25_2.setText(bundle50.getString("중량구당일확진자"));
-//
-//            Bundle bundle51 = msg.getData();
-//            textView26_2.setText(bundle51.getString("기타당일확진자"));
 
         }
     };

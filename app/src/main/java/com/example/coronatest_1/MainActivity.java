@@ -26,13 +26,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         btn_vac= (Button)findViewById(R.id.btn_vac);
         btn_vac.setOnClickListener(this);
 
-       /* btn_corona.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Present.class);
-                startActivity(intent);
-            }
-        });*/
     }
 
 
