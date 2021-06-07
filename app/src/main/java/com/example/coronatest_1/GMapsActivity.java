@@ -430,6 +430,4 @@ public class GMapsActivity extends FragmentActivity implements OnMapReadyCallbac
 
     }
 
-
-
 }

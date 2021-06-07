@@ -603,21 +603,6 @@ public class Seoul extends AppCompatActivity {
                     }
 
 
-                    //msg = elements.text();
-
-                    //textView1_1.setText("강남구");
-//                        bundle.putString("message",강남구오늘확진자 );
-//                        Message mmsg = handler.obtainMessage();
-//                        mmsg.setData(bundle);
-//                        handler.sendMessage(mmsg);
-
-
-//                        bundle.putString("mes",강남구총확진자 );
-//                        Message mmsg2 = handler.obtainMessage();
-//                        mmsg2.setData(bundle);
-//                        handler.sendMessage(mmsg2);
-
-
                 }catch (IOException e){
                     e.printStackTrace();
                 }

@@ -768,14 +768,6 @@ public class Gyeonbuk extends AppCompatActivity {
             Bundle bundle31 = msg.getData();
             textView8_2.setText(bundle31.getString("상주당일확진자"));
 
-//            Bundle bundle32 = msg.getData();
-//            textView6_2.setText(bundle32.getString("광진구당일확진자"));
-//
-//            Bundle bundle33 = msg.getData();
-//            textView7_2.setText(bundle33.getString("구로구당일확진자"));
-//
-//            Bundle bundle34 = msg.getData();
-//            textView8_2.setText(bundle34.getString("금천구당일확진자"));
 
             Bundle bundle35 = msg.getData();
             textView9_2.setText(bundle35.getString("문경당일확진자"));

@@ -273,26 +273,22 @@ public class Daejeon extends AppCompatActivity {
             Bundle bundle2 = msg.getData();
             textView1_3.setText(bundle2.getString("유성구총확진자"));
 
-//            Bundle bundle3 = msg.getData();
-//            textView1_2.setText(bundle3.getString("중구당일확진자"));
+
 
             Bundle bundle4 = msg.getData();
             textView2_3.setText(bundle4.getString("대덕구총확진자"));
 
-//            Bundle bundle5 = msg.getData();
-//            textView2_2.setText(bundle5.getString("동구당일확진자"));
+
 
             Bundle bundle6 = msg.getData();
             textView3_3.setText(bundle6.getString("서구총확진자"));
 
-//            Bundle bundle7 = msg.getData();
-//            textView3_2.setText(bundle7.getString("미추홀구당일확진자"));
+
 
             Bundle bundle8 = msg.getData();
             textView4_3.setText(bundle8.getString("중구총확진자"));
 
-//            Bundle bundle9 = msg.getData();
-//            textView4_2.setText(bundle9.getString("연수구당일확진자"));
+
 
             Bundle bundle10 = msg.getData();
             textView5_3.setText(bundle10.getString("동구총확진자"));

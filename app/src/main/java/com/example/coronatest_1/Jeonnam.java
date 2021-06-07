@@ -130,9 +130,6 @@ public class Jeonnam extends AppCompatActivity {
             Bundle bundle9 = msg.getData();
             textView8.setText(bundle9.getString("전남사망"));
 
-
-
-
         }
     };
 }

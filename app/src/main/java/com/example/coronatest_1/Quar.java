@@ -130,9 +130,6 @@ public class Quar extends AppCompatActivity {
             Bundle bundle9 = msg.getData();
             textView8.setText(bundle9.getString("검역사망"));
 
-
-
-
         }
     };
 }

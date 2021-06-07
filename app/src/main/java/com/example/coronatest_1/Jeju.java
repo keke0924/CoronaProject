@@ -130,9 +130,6 @@ public class Jeju extends AppCompatActivity {
             Bundle bundle9 = msg.getData();
             textView8.setText(bundle9.getString("제주사망"));
 
-
-
-
         }
     };
 }

@@ -32,20 +32,14 @@ public class Incheon extends AppCompatActivity {
     TextView textView5,textView6,textView7,textView8;
     //지역
     TextView textView1_1, textView2_1, textView3_1, textView4_1, textView5_1, textView6_1, textView7_1, textView8_1, textView9_1, textView10_1;
-    TextView textView11_1, textView12_1, textView13_1, textView14_1, textView15_1, textView16_1, textView17_1, textView18_1, textView19_1, textView20_1;
-    TextView textView21_1, textView22_1, textView23_1, textView24_1, textView25_1, textView26_1, textView27_1, textView28_1, textView29_1,textView30_1 ,textView31_1;
-
+    TextView textView11_1;
     //당일 확진자
     TextView textView1_2, textView2_2, textView3_2, textView4_2, textView5_2, textView6_2, textView7_2, textView8_2, textView9_2, textView10_2;
-    TextView textView11_2, textView12_2, textView13_2, textView14_2, textView15_2, textView16_2, textView17_2, textView18_2, textView19_2, textView20_2;
-    TextView textView21_2, textView22_2, textView23_2, textView24_2, textView25_2, textView26_2, textView27_2,textView28_2,textView29_2,textView30_2, textView31_2;
-
+    TextView textView11_2;
     //총 확진자
     TextView textView1_3, textView2_3, textView3_3, textView4_3, textView5_3, textView6_3, textView7_3, textView8_3, textView9_3, textView10_3;
-    TextView textView11_3, textView12_3, textView13_3, textView14_3, textView15_3, textView16_3, textView17_3, textView18_3, textView19_3, textView20_3;
-    TextView textView21_3, textView22_3, textView23_3, textView24_3, textView25_3, textView26_3, textView27_3,textView28_3,textView29_3,textView30_3, textView31_3;
+    TextView textView11_3;
 
-    String id = null;
     String url = "https://www.incheon.go.kr/health/HE020409";
     String url1 = "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13&ncvContSeq=&contSeq=&board_id=&gubun=";
     String url2 = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%BD%94%EB%A1%9C%EB%82%98+%ED%99%95%EC%A7%84%EC%9E%90";
@@ -478,128 +472,6 @@ public class Incheon extends AppCompatActivity {
 
             Bundle bundle23 = msg.getData();
             textView11_2.setText(bundle23.getString("기타당일확진자"));
-//
-//            Bundle bundle24 = msg.getData();
-//            textView23_3.setText(bundle24.getString("안성총확진자"));
-//
-//            Bundle bundle25 = msg.getData();
-//            textView24_3.setText(bundle25.getString("포천총확진자"));
-//
-//            Bundle bundle26 = msg.getData();
-//            textView25_3.setText(bundle26.getString("의왕총확진자"));
-//
-//            Bundle bundle27 = msg.getData();
-//            textView26_3.setText(bundle27.getString("여주총확진자"));
-//
-//            Bundle bundle = msg.getData();
-//            textView27_3.setText(bundle.getString("양평총확진자"));
-//
-//            Bundle bundle28 = msg.getData();
-//            textView28_3.setText(bundle28.getString("동두천총확진자"));
-//
-//            Bundle bundle29 = msg.getData();
-//            textView29_3.setText(bundle29.getString("과천총확진자"));
-//
-//            Bundle bundle30 = msg.getData();
-//            textView30_3.setText(bundle30.getString("가평총확진자"));
-//
-//            Bundle bundle31 = msg.getData();
-//            textView31_3.setText(bundle31.getString("연천총확진자"));
-//
-//            Bundle bundle32 = msg.getData();
-//            textView1_2.setText(bundle32.getString("수원당일확진자"));
-//
-//            Bundle bundle33 = msg.getData();
-//            textView2_2.setText(bundle33.getString("고양당일확진자"));
-//
-//            Bundle bundle34 = msg.getData();
-//            textView3_2.setText(bundle34.getString("용인당일확진자"));
-//
-//            Bundle bundle35 = msg.getData();
-//            textView4_2.setText(bundle35.getString("성남당일확진자"));
-//
-//            Bundle bundle36 = msg.getData();
-//            textView5_2.setText(bundle36.getString("부천당일확진자"));
-//
-//            Bundle bundle37 = msg.getData();
-//            textView6_2.setText(bundle37.getString("안산당일확진자"));
-//
-//            Bundle bundle38 = msg.getData();
-//            textView7_2.setText(bundle38.getString("화성당일확진자"));
-//
-//            Bundle bundle39 = msg.getData();
-//            textView8_2.setText(bundle39.getString("남양주당일확진자"));
-//
-//            Bundle bundle40 = msg.getData();
-//            textView9_2.setText(bundle40.getString("안양당일확진자"));
-//
-//            Bundle bundle41 = msg.getData();
-//            textView10_2.setText(bundle41.getString("평택당일확진자"));
-//
-//            Bundle bundle42 = msg.getData();
-//            textView11_2.setText(bundle42.getString("의정부당일확진자"));
-//
-//            Bundle bundle43 = msg.getData();
-//            textView12_2.setText(bundle43.getString("파주당일확진자"));
-//
-//            Bundle bundle44 = msg.getData();
-//            textView13_2.setText(bundle44.getString("시흥당일확진자"));
-//
-//            Bundle bundle45 = msg.getData();
-//            textView14_2.setText(bundle45.getString("김포당일확진자"));
-//
-//            Bundle bundle46 = msg.getData();
-//            textView15_2.setText(bundle46.getString("광명당일확진자"));
-//
-//            Bundle bundle47 = msg.getData();
-//            textView16_2.setText(bundle47.getString("광주당일확진자"));
-//
-//            Bundle bundle48 = msg.getData();
-//            textView17_2.setText(bundle48.getString("군포당일확진자"));
-//
-//            Bundle bundle49 = msg.getData();
-//            textView18_2.setText(bundle49.getString("이천당일확진자"));
-//
-//            Bundle bundle50 = msg.getData();
-//            textView19_2.setText(bundle50.getString("오산당일확진자"));
-//
-//            Bundle bundle51 = msg.getData();
-//            textView20_2.setText(bundle51.getString("하남당일확진자"));
-//
-//            Bundle bundle52 = msg.getData();
-//            textView21_2.setText(bundle52.getString("양주당일확진자"));
-//
-//            Bundle bundle53 = msg.getData();
-//            textView22_2.setText(bundle53.getString("구리당일확진자"));
-//
-//            Bundle bundle54 = msg.getData();
-//            textView23_2.setText(bundle54.getString("안성당일확진자"));
-//
-//            Bundle bundle55 = msg.getData();
-//            textView24_2.setText(bundle55.getString("포천당일확진자"));
-//
-//            Bundle bundle56 = msg.getData();
-//            textView25_2.setText(bundle56.getString("의왕당일확진자"));
-//
-//            Bundle bundle57 = msg.getData();
-//            textView26_2.setText(bundle57.getString("여주당일확진자"));
-//
-//            Bundle bundle58= msg.getData();
-//            textView27_2.setText(bundle58.getString("양평당일확진자"));
-//
-//            Bundle bundle59 = msg.getData();
-//            textView28_2.setText(bundle59.getString("동두천당일확진자"));
-//
-//            Bundle bundle60 = msg.getData();
-//            textView29_2.setText(bundle60.getString("과천당일확진자"));
-//
-//            Bundle bundle61 = msg.getData();
-//            textView30_2.setText(bundle61.getString("가평당일확진자"));
-//
-//            Bundle bundle62 = msg.getData();
-//            textView31_2.setText(bundle62.getString("연천당일확진자"));
-
-
 
         }
     };
