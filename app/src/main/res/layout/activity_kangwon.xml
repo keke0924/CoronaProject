@@ -38,7 +38,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/table_inside"
                         android:gravity="center"
-                        android:text="합계"
+                        android:text="신규 확진자"
                         android:textSize="20sp" />
 
                 </TableRow>

@@ -29,7 +29,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Gyeonnam extends AppCompatActivity {
-    TableLayout tb;
+    TextView textView5, textView6, textView7, textView8;
+    String url1 = "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13&ncvContSeq=&contSeq=&board_id=&gubun=";
+    String url2 = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=%EC%BD%94%EB%A1%9C%EB%82%98+%ED%99%95%EC%A7%84%EC%9E%90";
+
     //지역
     TextView textView1_1, textView2_1, textView3_1, textView4_1, textView5_1, textView6_1, textView7_1, textView8_1, textView9_1, textView10_1;
     TextView textView11_1, textView12_1, textView13_1, textView14_1, textView15_1, textView16_1, textView17_1, textView18_1, textView19_1, textView20_1;
@@ -115,6 +118,10 @@ public class Gyeonnam extends AppCompatActivity {
         textView17_3 = findViewById(R.id.textView17_3);
         textView18_3 = findViewById(R.id.textView18_3);
 
+        textView5 = findViewById(R.id.textView5);
+        textView6 = findViewById(R.id.textView6);
+        textView7 = findViewById(R.id.textView7);
+        textView8 = findViewById(R.id.textView8);
 
         new Thread(){
             @Override
@@ -147,13 +154,6 @@ public class Gyeonnam extends AppCompatActivity {
                     for(int i = 0; i<70;i++) {
                         String a = elements.get(i).text();
 
-//                        if (i == 0) {
-//                            bundle.putString("강남구총확진자", a);
-//                            Message mmsg2 = handler.obtainMessage();
-//                            mmsg2.setData(bundle);
-//                            handler.sendMessage(mmsg2);
-//                            continue;
-//                        }
 
                         if (i == 2) {
                             bundle.putString("창원총확진자", a);
@@ -457,6 +457,86 @@ public class Gyeonnam extends AppCompatActivity {
                 }
             }
         }.start();
+
+        new Thread(){
+            @Override
+            public void run(){
+                Document doc = null;
+                try{
+                    doc = Jsoup.connect(url1).get();
+                    Elements elements = doc.select("td.number");//테그로 가져오기
+
+
+
+
+                    for(int i = 0; i<200;i++) {
+                        String a = elements.get(i).text();
+
+
+                        if (i == 131) {
+                            bundle.putString("경남총확진자", a);
+                            Message mmsg = handler.obtainMessage();
+                            mmsg.setData(bundle);
+                            handler.sendMessage(mmsg);
+                            continue;
+                        }
+
+                        if (i ==133 ) {
+                            bundle.putString("경남완치", a);
+                            Message mmsg = handler.obtainMessage();
+                            mmsg.setData(bundle);
+                            handler.sendMessage(mmsg);
+                            continue;
+                        }
+                        if (i == 134 ) {
+                            bundle.putString("경남사망", a);
+                            Message mmsg = handler.obtainMessage();
+                            mmsg.setData(bundle);
+                            handler.sendMessage(mmsg);
+                            break;
+                        }
+
+                    }
+
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }.start();
+
+        new Thread(){
+            @Override
+            public void run(){
+                Document doc = null;
+                try{
+                    doc = Jsoup.connect(url2).get();
+                    Elements elements = doc.select(".confirmed_case");//태그로 가져오기
+
+
+
+
+                    for(int i = 0; i<200;i++) {
+                        String a = elements.get(i).text();
+
+
+                        if (i == 5) {
+                            bundle.putString("경남신규확진자", a);
+                            Message mmsg = handler.obtainMessage();
+                            mmsg.setData(bundle);
+                            handler.sendMessage(mmsg);
+                            break;
+                        }
+
+
+
+
+                    }
+
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }.start();
     }
 
 
@@ -469,6 +549,18 @@ public class Gyeonnam extends AppCompatActivity {
 
         @Override
         public void handleMessage(Message msg){
+
+            Bundle bundles6 = msg.getData();
+            textView6.setText(bundles6.getString("경남총확진자"));
+
+            Bundle bundles7 = msg.getData();
+            textView5.setText(bundles7.getString("경남신규확진자"));
+
+            Bundle bundles8 = msg.getData();
+            textView7.setText(bundles8.getString("경남완치"));
+
+            Bundle bundles9 = msg.getData();
+            textView8.setText(bundles9.getString("경남사망"));
 
             Bundle bundle2 = msg.getData();
             textView1_3.setText(bundle2.getString("창원총확진자"));
