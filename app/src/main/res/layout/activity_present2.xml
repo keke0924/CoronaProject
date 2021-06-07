@@ -5,13 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="690dp"
@@ -20,7 +14,6 @@
         android:foregroundGravity="center">
 
         <GridLayout
-
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="#ffeeeeee"
@@ -886,6 +879,5 @@
         </ScrollView>
 
     </FrameLayout>
-        </LinearLayout>
-    </ScrollView>
+
 </LinearLayout>
