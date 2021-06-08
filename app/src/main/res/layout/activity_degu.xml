@@ -7,22 +7,7 @@
     tools:context=".degu"
     android:orientation="horizontal">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:layout_gravity="center"
-        >
 
-    <TextView
-        android:layout_gravity="center|top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:layout_marginTop="7dp"
-        android:text="서울 확진자 현황"
-        />
 
 
     <FrameLayout
@@ -134,5 +119,5 @@
     </TableLayout>
 
     </FrameLayout>
-    </FrameLayout>
+
 </LinearLayout>
